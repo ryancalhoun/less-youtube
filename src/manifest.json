@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Less YouTube",
+  "description": "This extension limits the time spent on YouTube.",
+  "version": "1.0",
+
+  "converted_from_user_script" : true,
+
+  "content_scripts": [{
+	"run_at" : "document_end",
+	"matches" : ["https://*.youtube.com/*"],
+    "js": [ "less_youtube.js" ]
+  }],
+  "permissions": [
+    "https://www.youtube.com/",
+    "storage"
+  ]
+}
